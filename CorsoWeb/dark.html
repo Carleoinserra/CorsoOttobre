@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+window.onload = gestoreLoad;
+
+function gestoreLoad(){
+
+ let btn = document.getElementById("btn");
+ btn.onclick = dark;
+
+ let num = 0;
+
+
+ function dark(){
+    if (num == 0) {
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+    num = 1;}
+    else {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        num = 0;
+
+    }
+
+    
+ }
+
+}
+
+
+
+    </script>
+</head>
+<body>
+    <div >
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque distinctio vitae maxime maiores nostrum assumenda non explicabo amet quos sunt doloribus nemo accusamus quia, corrupti optio reiciendis nulla officia fugit?
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, officiis? Corrupti eius eos iusto tempore, nulla maiores vel magni totam quis? Est sunt labore adipisci alias esse. Nisi, inventore a.
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, numquam doloremque officiis nisi consequatur, qui ipsam sed ad nostrum aliquid quasi porro deleniti rerum, harum corporis veritatis! Modi, vitae esse.
+
+
+
+    </div>
+    <button id = "btn">Dark</button>
+</body>
+</html>

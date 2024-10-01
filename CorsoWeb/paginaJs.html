@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+  window.onload = gestoreLoad;
+
+  function gestoreLoad(){
+
+    let btn = document.getElementById("btn");
+    btn.onclick = saluta;
+
+    
+
+    function saluta(){
+        let nome = document.getElementById("name").value;
+
+
+
+        alert("Ciao " + nome + " ,Benvenuto nel corso programmatore web");
+        console.log(nome);
+    }
+  }
+
+    </script>
+</head>
+<body>
+   <button id = "btn">Clicca</button> 
+   <input type = "text" id = "name">
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+window.onload = gestoreLoad;
+
+function gestoreLoad(){
+let lista = []
+// andiamo a recuperare il nodo con id btn
+ let btn = document.getElementById("btn");
+// andiamo a recuperare il nodo con id btn
+let btn1 = document.getElementById("btn1");
+
+
+ // associamo all'evento on click della pressione del pulsante la funzione stampa
+ btn.onclick= insert;
+
+ btn1.onclick = calcola;
+ 
+ let somma = 0;
+
+ function insert(){
+
+    // recuperiamo il valore dell'input con id num
+    let num = document.getElementById("temp").value;
+    // trasformiamo il valore stringa in numero
+    let numero = parseFloat(num);
+
+    lista.push(numero)
+    somma += numero;
+    alert(numero + " aggiunto con successo");
+
+}
+
+function calcola(){
+
+    //recuperiamo il nodo con id lista
+    let nodo = document.getElementById("lista");
+
+    let media = somma / lista.length;
+    // per un numero che va da 0 al numero inserito dall'utente meno uno
+    for (let i = 0; i < lista.length; i++) {
+        let text = "";
+        if (lista[i] > media) {
+
+            text = "Temperatura sopra la media";
+        }
+        else if (lista[i] < media) {
+            text = "Temperatura sotto la media";
+        }
+        else {
+            text = "Temperatura uguale alla media";
+        }
+
+
+
+
+        // viene creato un nodo elemento lista
+        let nodoLi = document.createElement("li");
+        // viene settato il testo di quel nodo con il valore della i
+
+    
+        nodoLi.textContent = lista[i] + " " + text;
+        // il nodo figlio li viene aggiunto al nodo padre lista
+        nodo.appendChild(nodoLi);
+    }
+
+
+
+
+ }
+
+
+
+
+}
+
+
+    </script>
+</head>
+<body>
+  <input id = "temp" type = "number"><br>
+  <button id = "btn">Inserisci</button>  <br>
+  <button id = "btn1">Calcola</button>
+  <ul id = "lista">
+
+
+  </ul>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+// mega evento è il window onload a cui passiamo la funzione gestoreLoad
+
+window.onload = gestoreLoad;
+
+function gestoreLoad(){
+
+
+
+let btn = document.getElementById("btn");
+
+btn.onclick = stampa;
+
+function stampa(){
+
+    let nome = document.getElementById("nome").value;
+
+    alert("Hello world " + nome );
+}
+
+
+
+
+}
+
+
+    </script>
+</head>
+<body>
+    <button id = "btn">clicca</button>
+    <input type = "text" id = "nome">
+</body>
+</html>

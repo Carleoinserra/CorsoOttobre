@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+window.onload = gestoreLoad;
+
+function gestoreLoad(){
+
+// andiamo a recuperare il nodo con id btn
+ let btn = document.getElementById("btn");
+
+ // associamo all'evento on click della pressione del pulsante la funzione stampa
+ btn.onclick= stampa;
+
+ function stampa(){
+
+    // recuperiamo il valore dell'input con id num
+    let num = document.getElementById("num").value;
+    // trasformiamo il valore stringa in numero
+    let numero = parseInt(num);
+    //recuperiamo il nodo con id lista
+    let nodo = document.getElementById("lista");
+    // per un numero che va da 0 al numero inserito dall'utente meno uno
+    for (let i = 0; i < numero; i++) {
+        // viene creato un nodo elemento lista
+        let nodoLi = document.createElement("li");
+        // viene settato il testo di quel nodo con il valore della i
+        nodoLi.textContent = i+1;
+        // il nodo figlio li viene aggiunto al nodo padre lista
+        nodo.appendChild(nodoLi);
+    }
+
+
+
+
+ }
+
+
+
+
+}
+
+
+
+
+    </script>
+</head>
+<body>
+    <h3> Inserisci un numero intero</h3>
+   <input type = "number" id = "num">
+   <br>
+   <button id = "btn">Invia</button> 
+
+   <ul id = "lista">
+
+
+   </ul>
+</body>
+</html>

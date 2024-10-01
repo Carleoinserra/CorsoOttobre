@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+display: grid;
+grid-template-rows: 200px 200px 200px;
+grid-column: 200px 200px 200px;
+grid-template-areas: "a1 a2 a7"
+                     "a3 a4 a4"
+                     "a5 a5 a6";
+
+}
+
+.a1 {
+    grid-area: a1;
+    background-color: aliceblue;
+}
+.a2 {
+    grid-area: a2;
+    background-color: rgb(40, 90, 135);
+}
+.a3 {
+    grid-area: a3;
+    background-color: azure;
+}
+
+.a4 {
+    grid-area: a4;
+    background-color: rgb(47, 124, 124);
+}
+.a5 {
+    grid-area: a5;
+    background-color:mediumspringgreen;
+}
+.p1 {
+    grid-area: p1;
+}
+.p2 {
+    grid-area: p2;
+}
+.p3 {
+    grid-area: p3;
+}
+.a6 {
+    grid-area: a6;
+    background-color: paleturquoise;
+    display: grid;
+    grid-column: 33% 33% 33%;
+    grid-template-areas: "p1 p2 p3";
+   
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.a3  {
+    margin: 0 auto;
+}
+@media screen and (max-width: 600px)  {
+    .container {
+    display: flex;
+    flex-direction: column;
+    }
+    .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+}
+
+
+    </style>
+</head>
+<body>
+ <div class = "container">
+    <p class = "a7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur possimus, aspernatur magnam animi repellendus omnis rem quasi iure nisi dolorem architecto impedit quos maxime repellat nostrum, sapiente voluptatum fuga distinctio!</p>
+<p class = "a1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, est. Cum corporis, possimus mollitia, sint impedit error nihil unde, laudantium blanditiis nobis odio officia ab. Eum repellat soluta hic architecto!</p>
+<p class = "a2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eum tempora accusamus commodi facilis doloremque laboriosam doloribus rerum est, quo nam minus nesciunt minima qui voluptatem labore? Ratione, minima repudiandae.</p>
+  <div class = "a3">  <img src="dante.jpeg" ></div>
+    <p class = "a4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut incidunt deserunt pariatur quae repellat saepe nisi voluptatem cupiditate, in accusantium ex aliquam. Delectus error sed veniam doloremque molestiae atque fuga.</p>
+    <p class = "a5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, nemo vero voluptatum, nihil architecto molestiae doloremque voluptatem eum inventore dolor, dolores error suscipit sed. Deserunt, dolor. Magni, voluptates omnis. Sunt?</p>
+   <div class = "a6"> <p id = "p1"></p><p id = "p2"><a href="" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a></p><p id = "p3"></p>
+   </div>
+
+
+ </div>   
+</body>
+</html>
